@@ -1,0 +1,22 @@
+{
+  "title": "state file",
+  "description": "Contents for state vector file.",
+  "type": "object",
+  "required": [
+    "name",
+    "seed",
+    "id",
+    "obs_tim",
+    "sys_tim",
+    "x"
+  ],
+  "properties": {
+    "name": { "$ref": "douka.type.json#/name" },
+    "seed": { "$ref": "douka.type.json#/seed" },
+    "id" : { "$ref": "douka.type.json#/id" },
+    "obs_tim" : { "$ref": "douka.type.json#/obs_tim" },
+    "sys_tim" : { "$ref": "douka.type.json#/sys_tim" },
+    "x": { "$ref": "douka.type.json#/x" }
+  }
+}
+

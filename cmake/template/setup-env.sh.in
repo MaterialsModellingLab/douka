@@ -1,0 +1,28 @@
+#!/bin/sh
+#shellcheck shell=sh
+# Copyright (c) 2025 Materials Modelling Lab, The University of Tokyo
+# SPDX-License-Identifier: Apache-2.0
+
+# Prepend path segment to env vars
+# Usage:
+#   env_var=$(__prepend_path "$prepend_to_var" "$existing_env_var")
+#   export $env_var
+# Inputs:
+#  $1: Path segment to be prepended to $2
+#  $2: Existing env var to be prepended to
+function __prepend_path() {
+  local _to_add="$1"
+  local _is_now="$2"
+  if [ -d "$_to_add" ] && [[ ":$_is_now:" != *":$_to_add:"* ]]; then
+    printf "%s" "$_to_add${_is_now:+":$_is_now"}"
+  else
+    printf "%s" "$_is_now"
+  fi
+}
+
+export DOUKA_ROOT="@CMAKE_INSTALL_PREFIX@"
+export PATH=$(__prepend_path "${DOUKA_ROOT}/@CMAKE_INSTALL_BINDIR@" $PATH)
+export LD_LIBRARY_PATH=$(__prepend_path "${DOUKA_ROOT}/@CMAKE_INSTALL_LIBDIR@" $LD_LIBRARY_PATH)
+export CMAKE_MODULE_PATH=$(__prepend_path "${DOUKA_ROOT}/@CMAKE_INSTALL_LIBDIR@/cmake" $CMAKE_MODULE_PATH)
+export DOUKA_DEFAULT_PLUGIN_PATH=$(__prepend_path "${DOUKA_ROOT}/@CMAKE_INSTALL_LIBDIR@/douka/plugin" $DOUKA_DEFAULT_PLUGIN_PATH)
+

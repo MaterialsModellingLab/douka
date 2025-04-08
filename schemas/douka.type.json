@@ -1,0 +1,119 @@
+{
+  "name": {
+    "title": "name",
+    "description": "Name of system model.",
+    "type": "string",
+    "$$target": "douka.type.json#/name"
+  },
+  "seed": {
+    "title": "seed",
+    "description": "Seed value for random number generator.",
+    "type": "integer",
+    "$$target": "douka.type.json#/seed"
+  },
+  "t": {
+    "title": "time step",
+    "description": "Total number of time steps to run the model.",
+    "type": "integer",
+    "$$target": "douka.type.json#/t"
+  },
+  "k": {
+    "title": "state size",
+    "description": "Size of the state vector.",
+    "type": "integer",
+    "$$target": "douka.type.json#/k"
+  },
+  "l": {
+    "title": "observation size",
+    "description": "Size of the observation vector.",
+    "type": "integer",
+    "$$target": "douka.type.json#/l"
+  },
+  "x0": {
+    "title": "initial ensemble mean",
+    "description": "Initial mean value of state vector. The size of vector should be equal 'k'.",
+    "$$target": "douka.type.json#/x0",
+    "type": "array",
+    "items": {
+      "type": "number"
+    }
+  },
+  "N": {
+    "title": "ensemble size",
+    "description": "Number of ensembles members.",
+    "type": "integer",
+    "$$target": "douka.type.json#/N"
+  },
+  "V0": {
+    "title": "initial ensemble covariance diagonal matrix",
+    "description": "Covariance value of ensemble distribution. The size of vector should be equal 'k'.",
+    "$$target": "douka.type.json#/V0",
+    "type": "array",
+    "items": {
+      "type": "number"
+    }
+  },
+  "R": {
+    "title": "observation noise covariance matrix",
+    "description": "Observation noise covariance matrix. The size of matrix should be 'l' x 'l' or 'l'.",
+    "$$target": "douka.type.json#/R",
+    "type": "array",
+    "items": {
+      "type": "number"
+    }
+  },
+  "Q": {
+    "title": "system noise covariance matrix",
+    "description": "System noise covariance matrix. The size of matrix should be 'k' x 'k' or 'k'.",
+    "$$target": "douka.type.json#/Q",
+    "type": "array",
+    "items": {
+      "type": "number"
+    }
+  },
+  "H": {
+    "title": "observation matrix",
+    "description": "Observation matrix. The size of matrix should be 'l' x 'k'.",
+    "$$target": "douka.type.json#/H",
+    "type": "array",
+    "items": {
+      "type": "number"
+    }
+  },
+  "obs_tim": {
+    "title": "observation timestamp",
+    "description": "Timestamp of the observation.",
+    "type": "integer",
+    "$$target": "douka.type.json#/obs_tim"
+  },
+  "sys_tim": {
+    "title": "simulation timestamp",
+    "description": "Timestamp of the simulation.",
+    "type": "integer",
+    "$$target": "douka.type.json#/sys_tim"
+  },
+  "y": {
+    "title": "observation vector",
+    "description": "Observation vector value. The size of vector should be equal 'l'.",
+    "$$target": "douka.type.json#/y",
+    "type": "array",
+    "items": {
+      "type": "number"
+    }
+  },
+  "x": {
+    "title": "vector of state mean value",
+    "description": "State vector value. The size of vector should be equal 'k'.",
+    "$$target": "douka.type.json#/x",
+    "type": "array",
+    "items": {
+      "type": "number"
+    }
+  },
+  "id": {
+    "title": "ensemble ID",
+    "description": "Identifier of the ensemble member.",
+    "type": "integer",
+    "$$target": "douka.type.json#/id"
+  }
+}

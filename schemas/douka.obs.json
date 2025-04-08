@@ -1,0 +1,15 @@
+{
+  "title": "obs file",
+  "description": "Contents for observation vector file.",
+  "type": "object",
+  "required": [
+    "name",
+    "obs_tim",
+    "y"
+  ],
+  "properties": {
+    "name": { "$ref": "douka.type.json#/name" },
+    "obs_tim" : { "$ref": "douka.type.json#/obs_tim" },
+    "y": { "$ref": "douka.type.json#/y" }
+  }
+}

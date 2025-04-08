@@ -1,0 +1,7 @@
+Sphinx==7.3.7
+sphinx_rtd_theme==2.0.0
+sphinx_design==0.6.1
+sphinx-jsonschema==1.19.1
+breathe==4.35.0
+esbonio==0.16.5
+

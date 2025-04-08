@@ -1,0 +1,16 @@
+{
+  "title": "predict command parameters",
+  "description": "Parameters for prediction step",
+  "type": "object",
+  "required": [
+    "name",
+    "seed",
+    "k"
+  ],
+  "properties": {
+    "name": { "$ref": "douka.type.json#/name" },
+    "seed": { "$ref": "douka.type.json#/seed" },
+    "k" : { "$ref": "douka.type.json#/k" },
+    "Q": { "$ref": "douka.type.json#/R" }
+  }
+}

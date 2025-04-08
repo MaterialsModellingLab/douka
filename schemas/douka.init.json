@@ -1,0 +1,21 @@
+{
+  "title": "init command parameters",
+  "description": "Parameters for initial distribution generation",
+  "type": "object",
+  "required": [
+    "name",
+    "seed",
+    "N",
+    "k",
+    "x0",
+    "V0"
+  ],
+  "properties": {
+    "name": { "$ref": "douka.type.json#/name" },
+    "seed": { "$ref": "douka.type.json#/seed" },
+    "N" : { "$ref": "douka.type.json#/N" },
+    "k" : { "$ref": "douka.type.json#/k" },
+    "x0": { "$ref": "douka.type.json#/x0" },
+    "V0": { "$ref": "douka.type.json#/V0" }
+  }
+}

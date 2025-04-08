@@ -1,0 +1,22 @@
+{
+  "title": "obsgen command parameters",
+  "description": "Parameters for observation data generation.",
+  "type": "object",
+  "required": [
+    "name",
+    "seed",
+    "t",
+    "k",
+    "l",
+    "x0"
+  ],
+  "properties": {
+    "name": { "$ref": "douka.type.json#/name" },
+    "seed": { "$ref": "douka.type.json#/seed" },
+    "t": { "$ref": "douka.type.json#/t" },
+    "k": { "$ref": "douka.type.json#/k" },
+    "l": { "$ref": "douka.type.json#/l" },
+    "x0": { "$ref": "douka.type.json#/x0" },
+    "H": { "$ref": "douka.type.json#/H" }
+  }
+}
