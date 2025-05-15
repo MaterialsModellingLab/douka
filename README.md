@@ -1,4 +1,4 @@
-[![CI](https://github.com/m12watanabe1a/douka/actions/workflows/ci.yaml/badge.svg)](https://github.com/m12watanabe1a/douka/actions/workflows/ci.yaml)
+[![CI](https://github.com/MaterialsModellingLab/douka/actions/workflows/ci.yaml/badge.svg)](https://github.com/MaterialsModellingLab/douka/actions/workflows/ci.yaml)
 
 ![logo](./doc/source/_static/logo.png)
 
@@ -63,7 +63,7 @@ cmake --build build/release
 ## Install
 After building, you can install the CLI tool with the following command:
 ```shell
-cmake --install build
+cmake --install build/release
 ```
 By default, douka will be installed in `~/.local` directory.
 
