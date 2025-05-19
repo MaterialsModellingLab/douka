@@ -19,16 +19,8 @@ option(BUILD_BENCHMARK "Build benchmark" OFF)
 # Define executable name for different platforms
 set(DOUKA_EXECUTABLE_NAME "${PROJECT_NAME}")
 
-# CMake Local Module Imports
-include(${CMAKE_SOURCE_DIR}/cmake/clang_format.cmake)
-include(${CMAKE_SOURCE_DIR}/cmake/cppcheck.cmake)
-include(${CMAKE_SOURCE_DIR}/cmake/dependencies.cmake)
-include(${CMAKE_SOURCE_DIR}/cmake/filesystem.cmake)
-include(${CMAKE_SOURCE_DIR}/cmake/git-version.cmake)
-include(${CMAKE_SOURCE_DIR}/cmake/install.cmake)
-include(${CMAKE_SOURCE_DIR}/cmake/status.cmake)
-
 # Get git tag as PROJECT_VERSION
+include(${CMAKE_SOURCE_DIR}/cmake/git-version.cmake)
 get_git_version()
 
 # Build Documentation
@@ -37,6 +29,14 @@ if(BUILD_DOC)
   build_doc()
   return()
 endif(BUILD_DOC)
+
+# CMake Local Module Imports
+include(${CMAKE_SOURCE_DIR}/cmake/clang_format.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/cppcheck.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/dependencies.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/filesystem.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/install.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/status.cmake)
 
 # Interface
 set(PLUGIN_INTERFACE_PUBLIC_HEADERES
