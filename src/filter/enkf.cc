@@ -11,10 +11,8 @@
 
 #include <algorithm>
 #include <cassert>
-#include <cinttypes>
 #include <filesystem>
 #include <string>
-#include <unordered_map>
 #include <vector>
 
 namespace douka::filter::enkf {

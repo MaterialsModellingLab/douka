@@ -25,9 +25,6 @@
   },
   "json.format.keepLines": true,
   "C_Cpp.default.compilerPath": "/usr/bin/clang++",
-  "[python]": {
-    "editor.defaultFormatter": "ms-python.autopep8"
-  },
   "esbonio.sphinx.confDir": "${workspaceFolder}/doc/source",
   "esbonio.sphinx.buildDir": "${workspaceFolder}/build/doc",
   "esbonio.sphinx.srcDir": "${workspaceFolder}/doc/source",
