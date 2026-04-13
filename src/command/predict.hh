@@ -34,7 +34,7 @@ struct Param {
   uint64_t seed;
   uint64_t k;
 
-  std::vector<double> Q;  // Optional
+  std::vector<double> Q; // Optional
 
   NLOHMANN_DEFINE_TYPE_INTRUSIVE(Param, name, seed, k);
 

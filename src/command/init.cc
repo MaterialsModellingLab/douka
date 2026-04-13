@@ -5,14 +5,11 @@
 
 #include "init.hh"
 #include "common/compute.hh"
-#include "common/io.hh"
 
 #include <Eigen/Core>
 
-#include <algorithm>
 #include <filesystem>
 #include <random>
-#include <unordered_map>
 
 namespace douka::command::init {
 static bool show_help(const int argc, char const *const argv[]) {

@@ -4,13 +4,11 @@
  */
 
 #include "obsgen.hh"
-#include "common/compute.hh"
 #include "common/io.hh"
 
 #include <Eigen/Core>
 #include <Eigen/QR>
 
-#include <cinttypes>
 #include <filesystem>
 #include <random>
 

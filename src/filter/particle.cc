@@ -7,7 +7,6 @@
 
 #include <cassert>
 #include <iostream>
-#include <vector>
 
 namespace douka::filter::particle {
 int entry([[maybe_unused]] const command::filter::Args &args) {

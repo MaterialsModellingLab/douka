@@ -22,50 +22,43 @@ public:
 };
 
 TEST(obsgen, validate_valid1) {
-  douka::command::obsgen::Param param = {
-      "test", 0, 10, 3, 2, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
+  douka::command::obsgen::Param param = {"test", 0, 10, 3, 2, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
 
   ASSERT_TRUE(douka::command::obsgen::validate(param));
 }
 
 TEST(obsgen, validate_invalid1) {
-  douka::command::obsgen::Param param = {
-      "test", 0, 10, 2, 2, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
+  douka::command::obsgen::Param param = {"test", 0, 10, 2, 2, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
 
   ASSERT_FALSE(douka::command::obsgen::validate(param));
 }
 
 TEST(obsgen, validate_invalid2) {
-  douka::command::obsgen::Param param = {
-      "test", 0, 10, 3, 1, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
+  douka::command::obsgen::Param param = {"test", 0, 10, 3, 1, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
 
   ASSERT_FALSE(douka::command::obsgen::validate(param));
 }
 
 TEST(obsgen, validate_invalid3) {
-  douka::command::obsgen::Param param = {
-      "", 0, 10, 3, 2, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
+  douka::command::obsgen::Param param = {"", 0, 10, 3, 2, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
 
   ASSERT_FALSE(douka::command::obsgen::validate(param));
 }
 
 TEST(obsgen, validate_invalid4) {
-  douka::command::obsgen::Param param = {
-      "test", 0, 0, 3, 1, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
+  douka::command::obsgen::Param param = {"test", 0, 0, 3, 1, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
 
   ASSERT_FALSE(douka::command::obsgen::validate(param));
 }
 
 TEST(obsgen, validate_invalid5) {
-  douka::command::obsgen::Param param = {
-      "test", 0, 10, 0, 1, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
+  douka::command::obsgen::Param param = {"test", 0, 10, 0, 1, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
 
   ASSERT_FALSE(douka::command::obsgen::validate(param));
 }
 
 TEST(obsgen, validate_invalid6) {
-  douka::command::obsgen::Param param = {
-      "test", 0, 10, 3, 0, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
+  douka::command::obsgen::Param param = {"test", 0, 10, 3, 0, {1.0, 2.0, 3.0}, {1, 0, 0, 1, 0, 0}};
 
   ASSERT_FALSE(douka::command::obsgen::validate(param));
 }
@@ -74,8 +67,7 @@ TEST(obsgen, obsgen) {
   auto plugin = std::make_unique<SamplePlugin>();
 
   const double sigma = 0.1;
-  douka::command::obsgen::Param param = {
-      "test", 0, 10, 3, 2, {1.0, 2.0, 3.0}, {}};
+  douka::command::obsgen::Param param = {"test", 0, 10, 3, 2, {1.0, 2.0, 3.0}, {}};
 
   std::vector<douka::io::Obs> observations;
   ASSERT_TRUE(douka::command::obsgen::obsgen(observations, param, std::move(plugin)));

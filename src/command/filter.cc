@@ -4,12 +4,9 @@
  */
 
 #include "filter.hh"
-#include "common/io.hh"
-#include "douka/io.hh"
 #include "filter/enkf.hh"
 #include "filter/particle.hh"
 
-#include <algorithm>
 #include <iostream>
 #include <numeric>
 
