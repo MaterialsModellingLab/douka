@@ -5,6 +5,7 @@
 
 #include "douka/plugin_interface.hh"
 #include <cassert>
+#include <cmath>
 
 class SamplePlugin : public douka::PluginInterface {
 public:
