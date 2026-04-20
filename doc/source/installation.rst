@@ -148,7 +148,7 @@ After building the project, you can install the binaries by typing the following
 
       .. code-block:: bash
 
-        cmake --install build
+        cmake --install build/release
 
         # You will see the version of the installed binaries.
         douka --version
@@ -160,7 +160,7 @@ After building the project, you can install the binaries by typing the following
 
       .. code-block:: bash
 
-        cmake --install build
+        cmake --install build/release
 
         # You will see the version of the installed binaries.
         douka --version
@@ -172,7 +172,7 @@ After building the project, you can install the binaries by typing the following
 
       .. code-block:: bash
 
-        cmake --install build
+        cmake --install build/release
 
         # You will see the version of the installed binaries.
         douka --version
@@ -184,7 +184,7 @@ After building the project, you can install the binaries by typing the following
 
       .. code-block:: bash
 
-        cmake --install build
+        cmake --install build/a64fx-release
 
       .. note::
         You will need to login to the compute node to use the installed binaries.
