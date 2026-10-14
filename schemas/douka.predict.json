@@ -11,6 +11,6 @@
     "name": { "$ref": "douka.type.json#/name" },
     "seed": { "$ref": "douka.type.json#/seed" },
     "k" : { "$ref": "douka.type.json#/k" },
-    "Q": { "$ref": "douka.type.json#/R" }
+    "Q": { "$ref": "douka.type.json#/Q" }
   }
 }
